@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-nn)mv#9_s(%t-_)vs38%_8t)v!nc#z^=ue55v4v1+g7!oiwr+s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-tcaldato-iphilosophy-sto-hteiupvre4.us1.codeanyapp.com']
+ALLOWED_HOSTS = ['8000-tcaldato-iphilosophy-sto-hteiupvre4.us1.codeanyapp.com', '.herokuapp.com']
 
 
 # Application definition
@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 ]
 
 MIDDLEWARE = [
@@ -66,6 +70,16 @@ TEMPLATES = [
         },
     },
 ]
+
+AUTHENTICATION_BACKENDS = (
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+
+SITE_ID = 1
 
 WSGI_APPLICATION = 'iphilosophy_store.wsgi.application'
 

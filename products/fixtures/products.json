@@ -214,7 +214,7 @@
       "model": "products.product",
       "fields": {
         "sku": "pp5002990740",
-        "name": "Stafford 4-pk. Heavyweight Crewneck T-ShirtsBig & Tall",
+        "name": "Philosophy for Kids (and for Everyone): Plato",
         "author": "by Luis Arturo Pelayo",
         "description": "Philosophy for Kids (and for Everyone): Plato by Luis Arturo Pelayo is a captivating exploration of the life and ideas of the ancient Greek philosopher Plato, tailored for readers of all ages. Pelayo presents Plato's philosophy in an engaging and accessible manner, making his timeless insights into topics such as ethics, politics, and metaphysics accessible to children and adults alike. Through clear explanations and thought-provoking discussions, readers are invited to ponder Plato's famous allegories, dialogues, and theories, gaining a deeper understanding of his profound influence on Western thought. With its playful yet informative approach, Philosophy for Kids (and for Everyone): Plato encourages readers to think critically and engage with philosophy in a way that is both enlightening and enjoyable.",
         "price": 28.99,
@@ -236,7 +236,7 @@
         "category": 5,
         "rating": 4.4,
         "image_url": " ",
-        "image": "kids-fun-question.jpg"
+        "image": "kids-fun-questions.jpg"
       }
     },
     {
@@ -251,7 +251,7 @@
         "category": 5,
         "rating": 4.4,
         "image_url": "",
-        "image": "easter-and-western.jpg"
+        "image": "eastern-and-western.jpg"
       }
     },
     {
@@ -574,7 +574,7 @@
       "model": "products.product",
       "fields": {
         "sku": "pp5003960062",
-        "name": "Stafford 4-pk. Heavyweight Crewneck T-ShirtsBig & Tall",
+        "name": "Philosophy for Kids (and for Everyone): Plato",
         "author": "by Luis Arturo Pelayo",
         "description": "Philosophy for Kids (and for Everyone): Plato by Luis Arturo Pelayo is a captivating exploration of the life and ideas of the ancient Greek philosopher Plato, tailored for readers of all ages. Pelayo presents Plato's philosophy in an engaging and accessible manner, making his timeless insights into topics such as ethics, politics, and metaphysics accessible to children and adults alike. Through clear explanations and thought-provoking discussions, readers are invited to ponder Plato's famous allegories, dialogues, and theories, gaining a deeper understanding of his profound influence on Western thought. With its playful yet informative approach, Philosophy for Kids (and for Everyone): Plato encourages readers to think critically and engage with philosophy in a way that is both enlightening and enjoyable.",
         "price": 28.99,

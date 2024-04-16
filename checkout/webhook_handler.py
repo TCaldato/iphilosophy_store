@@ -63,7 +63,6 @@ class StripeWH_Handler:
         profile = None
         username = intent.metadata.username
         if username != "AnonymousUser":
-            # pylint: disable=no-member #Inline Pylint Disable Comments
             profile = UserProfile.objects.get(user__username=username)
             if save_info:
                 profile.default_phone_number = shipping_details.phone
@@ -79,7 +78,6 @@ class StripeWH_Handler:
         attempt = 1
         while attempt <= 5:
             try:
-                # pylint: disable=no-member #Inline Pylint Disable Comments
                 order = Order.objects.get(
                     full_name__iexact=shipping_details.name,
                     email__iexact=billing_details.email,
@@ -108,7 +106,6 @@ class StripeWH_Handler:
         else:
             order = None
             try:
-                # pylint: disable=no-member #Inline Pylint Disable Comments
                 order = Order.objects.create(
                     full_name=shipping_details.name,
                     user_profile=profile,
@@ -123,8 +120,7 @@ class StripeWH_Handler:
                     original_bag=bag,
                     stripe_pid=pid,
                 )
-                for item_id, item_data in json.loads(bag).items():
-                    # pylint: disable=no-member #Inline Pylint Disable Comments
+                for item_id, item_data in json.loads(bag).items():                    
                     product = Product.objects.get(id=item_id)
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(

@@ -40,7 +40,6 @@ def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
-    # pylint: disable=no-member #Inline Pylint Disable Comments
     if request.method == "POST":
         bag = request.session.get("bag", {})
         form_data = {
@@ -150,7 +149,6 @@ def checkout_success(request, order_number):
     save_info = request.session.get("save_info")
     order = get_object_or_404(Order, order_number=order_number)
 
-    # pylint: disable=no-member #Inline Pylint Disable Comments
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
         order.user_profile = profile

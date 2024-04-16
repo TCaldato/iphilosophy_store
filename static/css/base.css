@@ -25,7 +25,8 @@ body {
 }
 
 .main-logo-link {
-    width: fit-content;
+    width: -moz-fit-content; 
+    width: fit-content; 
 }
 
 .shop-now-button {

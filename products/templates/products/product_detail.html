@@ -57,7 +57,7 @@
                             {% if s %}
                                 <div class="col-12">
                                     <p><strong>Size:</strong></p>
-                                    <select class="form-control rounded-0 w-50" name="product_size" id='id_product_size'>
+                                    <select class="form-control rounded-0 w-50" name="product_size" id='id_product_size' aria-label="select">
                                         <option value="xs">XS</option>
                                         <option value="s">S</option>
                                         <option value="m" selected>M</option>
@@ -72,7 +72,7 @@
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <button class="decrement-qty btn btn-black rounded-0" 
-                                                data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
+                                                data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}" aria-label="button" type="button">
                                                 <span class="icon">
                                                     <i class="fas fa-minus"></i>
                                                 </span>
@@ -81,10 +81,10 @@
                                         <input class="form-control qty_input" type="number"
                                             name="quantity" value="1" min="1" max="99"
                                             data-item_id="{{ product.id }}"
-                                            id="id_qty_{{ product.id }}">
+                                            id="id_qty_{{ product.id }}" aria-label="input">
                                         <div class="input-group-append">
                                             <button class="increment-qty btn btn-black rounded-0"
-                                                data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                                data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}" aria-label="button" type="button">
                                                 <span class="icon">
                                                     <i class="fas fa-plus"></i>
                                                 </span>

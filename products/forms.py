@@ -20,7 +20,7 @@ class ProductForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        # pylint: disable=no-member #Inline Pylint Disable Comments
+        
         categories = Category.objects.all()
         friendly_names = [(c.id, c.get_friendly_name()) for c in categories] # Create a list of tuples for dropdown choices
 

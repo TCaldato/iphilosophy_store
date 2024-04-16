@@ -10,8 +10,6 @@ from .forms import ProductForm
 
 def all_products(request):
     """A view to show all products, including sorting and search queries"""
-
-    # pylint: disable=no-member #Inline Pylint Disable Comments
     products = Product.objects.all()
     query = None
     categories = None

@@ -6,7 +6,8 @@ from products.models import Product
 
 def bag_contents(request):
     """
-    Retrieve the contents of the shopping bag from the session and calculate various totals.
+    Retrieve the contents of the shopping bag 
+    from the session and calculate various totals.
     """
 
     bag_items = []

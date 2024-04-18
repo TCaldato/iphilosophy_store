@@ -1,2 +1,1 @@
-
-Iphilosopy Confirmation for Order Number {{ order.order_number }}
+Iphilosophy Confirmation for Order Number {{ order.order_number }}

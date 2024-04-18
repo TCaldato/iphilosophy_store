@@ -1,4 +1,4 @@
-from django.apps import AppConfig # Module imports the AppConfig class from Django's apps module.
+from django.apps import AppConfig
 
 
 class BagConfig(AppConfig):

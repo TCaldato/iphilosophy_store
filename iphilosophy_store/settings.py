@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-tcaldato-iphilosophy-sto-hteiupvre4.us1.codeanyapp.com', '.herokuapp.com', '127.0.0.1']
 
@@ -217,10 +217,11 @@ STRIPE_PUBLIC_KEY = os.environ.get("STRIPE_PUBLIC_KEY")
 STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET')
 
 
-#SMTP on heroku is not deploying, version of the Django and Python
+#SMTP on heroku is not deploying, the version of the Django and Python
 #are not compatible. Tryed to change the requirements for SMTP but all requirements
-#need to be changed. 
+#need to be changed.
 #More information in the ReadMe.
+
 if 'DEVELOPMENT' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     DEFAULT_FROM_EMAIL = 'iphilosophy@example.com'

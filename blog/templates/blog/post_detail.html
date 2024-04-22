@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-md-6 masthead-text">
+                <!-- Post title goes in these h1 tags -->
+                <h1 class="post-title">{{ post.title }}</h1>
+                <!-- Post author and date -->
+                <p class="post-subtitle">{{ post.author }} | {{ post.created_on|date:"Y-m-d H:i" }}</p>
+            </div>
+            <div class="d-none d-md-block col-md-6 masthead-image">
+                <!-- Check if there is an image, else provide a placeholder -->
+                {% if post.image %}
+                <img src="{{ post.image.url }}" class="img-fluid scale" alt="{{ post.title }}">
+                {% else %}
+                <img src="{% static 'blog/images/noimage.png' %}" class="img-fluid scale" alt="No image available">
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col card mb-4 mt-3 left top">
+            <div class="card-body">
+                <!-- Display the post content with safe filter to render HTML properly -->
+                <p class="card-text">{{ post.content|safe }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

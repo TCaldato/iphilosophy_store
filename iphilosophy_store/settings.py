@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-tcaldato-iphilosophy-sto-hteiupvre4.us1.codeanyapp.com', '.herokuapp.com', '127.0.0.1']
 
@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'bag',
     'checkout',
     'profiles',
+    'blog',
 
     # Other
     'crispy_forms',
@@ -222,14 +223,14 @@ STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET')
 #need to be changed.
 #More information in the ReadMe.
 
-if 'DEVELOPMENT' in os.environ:
-    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    DEFAULT_FROM_EMAIL = 'iphilosophy@example.com'
-else:
-    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-    EMAIL_USE_TLS = True
-    EMAIL_PORT = 587
-    EMAIL_HOST = 'smtp.gmail.com'
-    EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
-    DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+#if 'DEVELOPMENT' in os.environ:
+#    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#    DEFAULT_FROM_EMAIL = 'iphilosophy@example.com'
+#else:
+#    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+#    EMAIL_USE_TLS = True
+#    EMAIL_PORT = 587
+#    EMAIL_HOST = 'smtp.gmail.com'
+#    EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+#    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
+#    DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')

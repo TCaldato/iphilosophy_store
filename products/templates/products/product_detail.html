@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load static %}
 
@@ -11,47 +10,66 @@
 {% endblock %}
 
 {% block content %}
+    <!-- Overlay div for background -->
     <div class="overlay"></div>
+
+    <!-- Product details -->
     <div class="container-fluid">
         <div class="row">
+            <!-- Product image -->
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                 <div class="image-container my-5">
                     {% if product.image %}
+                        <!-- Display product image with link to full-size image -->
                         <a href="{{ product.image.url }}" target="_blank">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
-                        {% else %}
+                    {% else %}
+                        <!-- Display placeholder image -->
                         <a href="">
                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                         </a>
                     {% endif %}
                 </div>
             </div>
+
+            <!-- Product details -->
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-5 mt-md-5">
+                    <!-- Product name and price -->
                     <p class="mb-0">{{ product.name }}</p>
                     <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                    
+                    <!-- Product category -->
                     {% if product.category %}
-                    <p class="small mt-1 mb-0">
-                        <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                            <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
-                        </a>
-                    </p>
+                        <p class="small mt-1 mb-0">
+                            <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                                <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                            </a>
+                        </p>
                     {% endif %}
+
+                    <!-- Product rating -->
                     {% if product.rating %}
                         <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
                     {% else %}
                         <small class="text-muted">No Rating</small>
                     {% endif %}
+
+                    <!-- Edit and delete links (for superusers) -->
                     {% if request.user.is_superuser %}
                         <small class="ml-3">
                             <a href="{% url 'edit_product' product.id %}">Edit</a> | 
                             <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                         </small>
                     {% endif %}
+
+                    <!-- Product description and form to add to bag -->
                     <p class="mt-3">{{ product.description }}</p>
                     <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                         {% csrf_token %}
+                        
+                        <!-- Product size (if available) -->
                         <div class="form-row">
                             {% with product.has_sizes as s %}
                             {% if s %}
@@ -66,11 +84,14 @@
                                     </select>
                                 </div>
                             {% endif %}
+                            
+                            <!-- Product quantity -->
                             <div class="col-12">
                                 <p class="mt-3"><strong>Quantity:</strong></p>
                                 <div class="form-group w-50">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
+                                            <!-- Decrease quantity button -->
                                             <button class="decrement-qty btn btn-black rounded-0" 
                                                 data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}" aria-label="button" type="button">
                                                 <span class="icon">
@@ -78,11 +99,13 @@
                                                 </span>
                                             </button>
                                         </div>
+                                        <!-- Quantity input -->
                                         <input class="form-control qty_input" type="number"
                                             name="quantity" value="1" min="1" max="99"
                                             data-item_id="{{ product.id }}"
                                             id="id_qty_{{ product.id }}" aria-label="input">
                                         <div class="input-group-append">
+                                            <!-- Increase quantity button -->
                                             <button class="increment-qty btn btn-black rounded-0"
                                                 data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}" aria-label="button" type="button">
                                                 <span class="icon">
@@ -94,6 +117,7 @@
                                 </div>
                             </div>
 
+                            <!-- Keep shopping and add to bag buttons -->
                             <div class="col{% if s %}-12 mt-2{% endif %}">
                                 <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
                                     <span class="icon">
@@ -111,9 +135,67 @@
             </div>
         </div>
     </div>
+
+    <!-- Customer Reviews -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+                <div class="container mt-4">
+                    <h3 class="mb-3">Customer Reviews</h3>
+                    <!-- Loop through product reviews -->
+                    {% for review in product.reviews.all %}
+                    <div class="review" id="review{{ review.id }}">
+                        <!-- Display review information -->
+                        <p><strong>{{ review.user.username }}</strong> ({{ review.created_on|date:"Y-m-d" }})</p>
+                        <p class="review-text">{{ review.review_text }}</p> 
+                        <small class="text-muted review-rating"><i class="fas fa-star mr-1"></i>Rating: {{ review.rating }} / 5</small>
+                        <!-- Edit and delete buttons (if review belongs to current user) -->
+                        {% if user.is_authenticated and review.user == user %}
+                            <button class="btn btn-edit-review btn-outline-info btn-sm" review_id="{{ review.id }}">Edit</button>
+                            <form action="{% url 'delete_review' product.id review.id %}" method="post" style="display:inline;">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-outline-danger btn-sm">Del</button>
+                            </form>
+                        {% endif %}
+                    </div>
+                    {% empty %}
+                        <p>No reviews yet.</p>
+                    {% endfor %}
+                </div>
+            </div>
+            
+            <!-- Form to add a review (if user is authenticated) -->
+            {% if user.is_authenticated %}
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="container mt-4">
+                    <h3 class="mb-3">Add a Review</h3>
+                    <form id="reviewForm" action="{% url 'add_review' product.id %}" method="post">
+                        {% csrf_token %}
+                        <label for="review_text">Review:</label>
+                        <textarea id="review_text" name="review_text" class="form-control mb-2" required placeholder="Enter your review"></textarea>                    
+                        <label for="rating">Rating:</label>
+                        <select name="rating" id="rating" class="form-control mb-2" required>
+                            <option value="" disabled selected>Select rating</option>
+                            <option value="1">1 Star</option>
+                            <option value="2">2 Stars</option>
+                            <option value="3">3 Stars</option>
+                            <option value="4">4 Stars</option>
+                            <option value="5">5 Stars</option>
+                        </select>                    
+                        <button type="submit" id="submitButton" class="btn btn-black">Review</button>
+                    </form>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
 {% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
+{% endblock %}
+
+{% block reviews_js %}
+<script src="{% static 'products/js/products.js' %}"></script>
 {% endblock %}

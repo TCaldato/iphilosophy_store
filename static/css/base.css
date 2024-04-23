@@ -175,6 +175,10 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
+.dark-bg {
+    background-color: #070707;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -266,6 +270,9 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
+.review p {
+    margin-bottom: 0;
+}
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {

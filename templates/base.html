@@ -127,13 +127,13 @@
       {% block content %}
       {% endblock %}
       <footer class="footer mt-auto py-3 dark-bg">
-         <p class="m-0 text-center text-white">
-            <a class="m-0 text-center text-white" href="{% url 'about' %}" id="about-link">
+         <h4 class="m-0 text-center text-white">
+            <a class="m-0 text-center font-weight-bold text-white" href="{% url 'about' %}" id="about-link">
                About iphilosophy
             </a>
-         </p>
-         <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
-             <i class="fab fa-instagram-square ms-3"></i>
+         </h4>
+         <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i> 
+             <i class=" fab fa-instagram-square ms-3"></i>
          </p>
      </footer>
       {% block postloadjs %}
@@ -142,6 +142,8 @@
       </script>
       {% endblock %}
       {% block comments_js %}
+      {% endblock %}
+      {% block reviews_js %}
       {% endblock %}
    </body>
 </html>

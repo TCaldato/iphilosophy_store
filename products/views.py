@@ -1,11 +1,12 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+from django.http import HttpResponseRedirect
 
-from .models import Product, Category
-from .forms import ProductForm
+from .models import Product, Category, Review
+from .forms import ProductForm, ReviewForm
 
 
 def all_products(request):
@@ -144,3 +145,54 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, "Product deleted!")
     return redirect(reverse("products"))
+
+
+@login_required
+def add_review(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.product = product
+            review.user = request.user
+            review.save()
+            messages.success(request, 'Your review has been added!')
+            return redirect('product_detail', product_id=product_id)
+    else:
+        form = ReviewForm()
+    return render(request, 'products/add_review.html', {'form': form, 'product': product})
+
+
+@login_required
+def edit_review(request, product_id, review_id):
+    """
+    View to edit reviews. Ensure that only the author of the review can edit it.
+    """
+    review = get_object_or_404(Review, pk=review_id, user=request.user, product_id=product_id)  # Ensure only the author can edit.
+
+    if request.method == "POST":
+        review_form = ReviewForm(request.POST, instance=review)
+        if review_form.is_valid():
+            review_form.save()
+            messages.success(request, 'Review updated successfully!')
+            return redirect('product_detail', product_id=product_id)  # Redirect to product detail page.
+        else:
+            messages.error(request, 'Error updating review. Please check the form.')
+
+    else:
+        review_form = ReviewForm(instance=review)
+
+    return render(request, 'products/edit_review.html', {'form': review_form, 'product_id': product_id})
+
+
+@login_required
+def delete_review(request, product_id, review_id):
+    review = get_object_or_404(Review, id=review_id, user=request.user)  
+    if request.method == 'POST':
+        review.delete()
+        messages.success(request, 'Review deleted successfully!')
+        return redirect('product_detail', product_id=product_id)
+    else:
+        messages.error(request, 'Invalid method')
+        return redirect('product_detail', product_id=product_id)

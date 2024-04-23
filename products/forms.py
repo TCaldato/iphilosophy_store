@@ -1,7 +1,7 @@
 
 from django import forms
 from .widgets import CustomClearableFileInput
-from .models import Product, Category
+from .models import Product, Category, Review
 
 
 class ProductForm(forms.ModelForm):
@@ -22,8 +22,17 @@ class ProductForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         
         categories = Category.objects.all()
-        friendly_names = [(c.id, c.get_friendly_name()) for c in categories] # Create a list of tuples for dropdown choices
+        # Create a list of tuples for dropdown choices
+        friendly_names = [(c.id, c.get_friendly_name()) for c in categories]
 
         self.fields['category'].choices = friendly_names
         for _, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black rounded-0'
+
+
+class ReviewForm(forms.ModelForm):
+    """ This form allows users to create new review instances or update existing ones. """
+    class Meta:
+        """ Defines metadata options for the ReviewForm class, """
+        model = Review
+        fields = ('review_text', 'rating')

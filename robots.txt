@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /bag/
+Sitemap: https://iphilosophy-store-81d2532ac343.herokuapp.com/sitemap.xml

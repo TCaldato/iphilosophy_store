@@ -179,6 +179,11 @@ input[name='q']::placeholder {
     background-color: #070707;
 }
 
+.post-title {
+    margin-top: 40%;
+    margin-left: 5%;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

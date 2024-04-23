@@ -172,7 +172,8 @@
                     <form id="reviewForm" action="{% url 'add_review' product.id %}" method="post">
                         {% csrf_token %}
                         <label for="review_text">Review:</label>
-                        <textarea id="review_text" name="review_text" class="form-control mb-2" required placeholder="Enter your review"></textarea>                    
+                        <textarea id="review_text" name="review_text" class="form-control mb-2" required placeholder="Enter your review"></textarea>
+                    
                         <label for="rating">Rating:</label>
                         <select name="rating" id="rating" class="form-control mb-2" required>
                             <option value="" disabled selected>Select rating</option>
@@ -181,7 +182,8 @@
                             <option value="3">3 Stars</option>
                             <option value="4">4 Stars</option>
                             <option value="5">5 Stars</option>
-                        </select>                    
+                        </select>
+                    
                         <button type="submit" id="submitButton" class="btn btn-black">Review</button>
                     </form>
                 </div>

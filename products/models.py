@@ -57,3 +57,11 @@ class Review(models.Model):
 
     def __str__(self):
         return f'Review {self.review_text} by {self.user.username}'
+
+
+class Wishlist(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='wishlists')
+    products = models.ManyToManyField(Product, related_name='wishlisted_by')
+
+    def __str__(self):
+        return f"Wishlist of {self.user.username}"

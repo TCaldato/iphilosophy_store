@@ -5,7 +5,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 from django.http import HttpResponseRedirect
 
-from .models import Product, Category, Review
+from .models import Product, Category, Review, Wishlist
 from .forms import ProductForm, ReviewForm
 
 
@@ -196,3 +196,31 @@ def delete_review(request, product_id, review_id):
     else:
         messages.error(request, 'Invalid method')
         return redirect('product_detail', product_id=product_id)
+    
+
+@login_required
+def view_wishlist(request):
+    wishlist, created = Wishlist.objects.get_or_create(user=request.user)
+    return render(request, 'products/wishlist.html', {'wishlist': wishlist})
+
+@login_required
+def add_to_wishlist(request, product_id):
+    product = get_object_or_404(Product, id=product_id)
+    wishlist, created = Wishlist.objects.get_or_create(user=request.user)
+    if product not in wishlist.products.all():
+        wishlist.products.add(product)
+        messages.success(request, f'{product.name} was added to your wishlist!')
+    else:
+        messages.info(request, 'This product is already in your wishlist.')
+
+    # Usar o referer para voltar à página anterior
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER', 'redirect_if_referer_not_found'))
+
+@login_required
+def remove_from_wishlist(request, product_id):
+    product = get_object_or_404(Product, id=product_id)
+    wishlist = Wishlist.objects.get(user=request.user)
+    if product in wishlist.products.all():
+        wishlist.products.remove(product)
+        messages.success(request, f'{product.name} was removed from your wishlist.')
+    return redirect('wishlist')

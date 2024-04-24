@@ -5,9 +5,20 @@ from .models import About, CollaborateRequest
 
 @admin.register(About)
 class AboutAdmin(SummernoteModelAdmin):
-    summernote_fields = ('content',)
+    """Admin interface for the About model."""
+
+    summernote_fields = ("content",)
+    # Use Summernote editor for the 'content' field.
+
 
 @admin.register(CollaborateRequest)
 class CollaborateRequestAdmin(admin.ModelAdmin):
+    """This class configures the admin view for
+    CollaborateRequest models
+    """
 
-    list_display = ('message', 'read',)
+    # Display 'message' and 'read' status in the admin list.
+    list_display = (
+        "message",
+        "read",
+    )

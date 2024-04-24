@@ -1,48 +1,54 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block page_header %}
+<!-- Header container that uses Bootstrap classes for layout -->
 <div class="container header-container">
-    <div class="row">
-        <div class="col"></div>
-    </div>
+	<div class="row">
+		<div class="col"></div>
+	</div>
 </div>
 {% endblock %}
-
 {% block content %}
 <div class="overlay"></div>
 <div class="container mt-5">
-    <div class="row">
-        <div class="col-12 col-md-4 text-center">
-            <!-- Directly reference the image from the media folder -->
-            <img src="{{ MEDIA_URL }}iphilosophy.jpg" class="img-fluid" width="75%" alt="iPhilosophy">
-        </div>
-        <div class="col-12 col-md-8">
-            <h2>{{ about.title }}</h2>
-            <div>{{ about.content | safe }}</div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col text-right">    
-            <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
-        </div>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col-12 col-md-6 my-5">
-            <h2>Let's collaborate!</h2>
-            <p>Looking to <strong>best sellers philosophy books?</strong> Explore <strong>mind-blowing 
-                philosophy books to buy </strong>, they're essential reads for everyone. 
-                Whether you're a seasoned <stronge>philosopher </stronge> or just starting out, these 
-                books are a must-read. I believe in the power of <strong>shared knowledge</strong> and 
-                collective effort. Whether you have a project in mind, wish to co-author 
-                an article, or simply want to brainstorm some ideas, I'm excited to hear 
-                from you. Fill out the form and we can get the ball rolling!</p>
-            <form method="post">
-                {{ collaborate_form | crispy }}
-                {% csrf_token %}
-                <button class="btn btn-secondary" type="submit">Submit</button>
-            </form>
-        </div>
-    </div>
+	<div class="row">
+		<div class="col-12 col-md-4 text-center">
+			<!-- Image of iPhilosophy logo, dynamically sourced from the media directory -->
+			<img src="{{ MEDIA_URL }}iphilosophy.jpg" class="img-fluid" width="75%" alt="iPhilosophy">
+		</div>
+		<div class="col-12 col-md-8">
+            <!-- Displaying the title of the 'About' section -->
+			<h2>{{ about.title }}</h2>
+            <!-- Safely rendering HTML content from the 'About' model's content field -->
+			<div>{{ about.content | safe }}</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col text-right">
+            <!-- Footer showing the last updated timestamp for the 'About' content -->
+			<p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
+		</div>
+	</div>
+	<div class="row justify-content-center">
+		<div class="col-12 col-md-6 my-5">
+			<h2>Let's collaborate!</h2>
+			<p>
+				Looking to <strong>best sellers philosophy books?</strong> Explore <strong>mind-blowing 
+				philosophy books to buy </strong>, they're essential reads for everyone. 
+				Whether you're a seasoned 
+				<stronge>philosopher</stronge>
+				or just starting out, these 
+				books are a must-read. I believe in the power of <strong>shared knowledge</strong> and 
+				collective effort. Whether you have a project in mind, wish to co-author 
+				an article, or simply want to brainstorm some ideas, I'm excited to hear 
+				from you. Fill out the form and we can get the ball rolling!
+			</p>
+			<form method="post">
+				{{ collaborate_form | crispy }} <!-- Renders the form using django-crispy-forms -->
+				{% csrf_token %} <!-- CSRF token for form security -->
+				<button class="btn btn-secondary" type="submit">Submit</button>
+			</form>
+		</div>
+	</div>
 </div>
 {% endblock content %}

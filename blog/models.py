@@ -1,12 +1,18 @@
+# pylint: disable=all
 from django.db import models
 from django.contrib.auth.models import User
+from django.contrib.contenttypes.models import ContentType
+from django.contrib.contenttypes.fields import GenericForeignKey
 
-# Create your models here.
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
 
 class Post(models.Model):
+    """
+    Model representing a blog post.
+    """
+
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
@@ -26,6 +32,10 @@ class Post(models.Model):
         return f"{self.title} | written by {self.author}"
 
 class Comment(models.Model):
+    """
+    Model representing a comment on a blog post.
+    """
+
     post = models.ForeignKey(
         Post, on_delete=models.CASCADE, related_name="comments")
     author = models.ForeignKey(

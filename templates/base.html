@@ -15,6 +15,8 @@
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
       <link rel="stylesheet" href="{% static 'css/base.css' %}">
+      <!-- MailChimp-->
+      <link rel="stylesheet" type="text/css" href="//cdn-images.mailchimp.com/embedcode/classic-061523.css">
       {% endblock %}
       {% block extra_css %}
       {% endblock %}
@@ -26,6 +28,8 @@
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
       <!-- Stripe -->
       <script src="https://js.stripe.com/v3/"></script>
+      <!-- MailChimp -->
+      <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
       {% endblock %}
       {% block extra_js %}
       {% endblock %}
@@ -131,20 +135,57 @@
       {% endblock %}
       {% block content %}
       {% endblock %}
+
       <footer class="footer mt-auto py-3 dark-bg">
-         <h4 class="m-0 text-center text-white">
-            <a class="m-0 text-center font-weight-bold text-white" href="{% url 'about' %}" id="about-link">
-               About iphilosophy
-            </a>
-         </h4>
-         <p class=" m-0 text-center text-white">Follow us: </p>
-         <div class=" m-0 text-center text-white">
-            <a href="" class="m-0 text-center text-white" target="_blank" rel="noopener" 
-                 aria-label="Visit our Facebook Page"><i class="fab fa-facebook-square ms-3"></i> </a> // 
-            <a href="https://www.instagram.com/iphilosophyquotes/" class="m-0 text-center text-white" target="_blank" rel="noopener" 
-                 aria-label="Visit our Instagram Page"><i class=" fab fa-instagram-square ms-3"></i> </a>
+         <div class="row">
+            <div class="col"> 
+               <a class="col font-weight-bold text-white text-center" href="{% url 'about' %}" id="about-link">
+                  <h5>About Iphilosophy</h5>
+               </a>
+              <div class="col text-center text-white">
+                  <h5>Follow us:</h5>
+                  <div class="col">
+                     <a href="https://www.facebook.com/profile.php?id=61558972765906" class="m-0 text-center text-white" target="_blank" rel="noopener" 
+                        aria-label="Visit our Facebook Page"><i class="fab fa-facebook-square ms-3"></i> Facebook </a> 
+                  </div>
+                  <div>
+                     <a href="https://www.instagram.com/iphilosophyquotes/" class="m-0 text-center text-white" target="_blank" rel="noopener" 
+                        aria-label="Visit our Instagram Page"><i class=" fab fa-instagram-square ms-3"></i> Instagram </a>
+                  </div>
+              </div>
+            </div>           
+           <div class="col text-center text-white">            
+               <div id="mc_embed_shell">
+                  <div id="mc_embed_signup">
+                  <form action="https://herokuapp.us22.list-manage.com/subscribe/post?u=813200609ad1a25efbfa23db9&amp;id=461d3df896&amp;f_id=00b6c4e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                     <div id="mc_embed_signup_scroll">
+                        <h2>Subscribe</h2>
+                        <p>Get exclusive offers by subscribing to our monthly newsletter</p>
+                        <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                        <div class="mc-field-group">
+                           <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+                           <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""><span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+                        </div>
+                        <div id="mce-responses" class="clear foot">
+                           <div class="response" id="mce-error-response" style="display: none;"></div>
+                           <div class="response" id="mce-success-response" style="display: none;"></div>
+                        </div>
+                        <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                           /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+                           <input type="text" name="b_813200609ad1a25efbfa23db9_461d3df896" tabindex="-1" value="">
+                        </div>
+                        <div class="optionalParent">
+                           <div class="clear foot">
+                              <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+                              <p style="margin: 0px auto;"><a href="http://eepurl.com/iOKOb2" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
+                           </div>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
          </div>
-     </footer>
+      </footer>
       {% block postloadjs %}
       <script type="text/javascript">
          $('.toast').toast('show');
@@ -154,5 +195,24 @@
       {% endblock %}
       {% block reviews_js %}
       {% endblock %}
+
+      <script type="text/javascript">(function($) {
+         window.fnames = new Array(); 
+         window.ftypes = new Array();
+         fnames[0]='EMAIL';
+         ftypes[0]='email';
+         fnames[1]='FNAME';
+         ftypes[1]='text';
+         fnames[2]='LNAME';
+         ftypes[2]='text';
+         fnames[3]='ADDRESS';
+         ftypes[3]='address';
+         fnames[4]='PHONE';
+         ftypes[4]='phone';
+         fnames[5]='BIRTHDAY';
+         ftypes[5]='birthday';
+         }(jQuery));var $mcj = jQuery.noConflict(true);
+      </script>
+
    </body>
 </html>

@@ -4,20 +4,23 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
+    """
+    Represents a migration in Django.
+    """
 
     dependencies = [
-        ('blog', '0004_auto_20240422_0934'),
+        ("blog", "0004_auto_20240422_0934"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='post',
-            name='image',
-            field=models.ImageField(blank=True, null=True, upload_to=''),
+            model_name="post",
+            name="image",
+            field=models.ImageField(blank=True, null=True, upload_to=""),
         ),
         migrations.AddField(
-            model_name='post',
-            name='image_url',
+            model_name="post",
+            name="image_url",
             field=models.URLField(blank=True, max_length=1024, null=True),
         ),
     ]

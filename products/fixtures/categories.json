@@ -35,8 +35,8 @@
       "pk": 5,
       "model": "products.category",
       "fields": {
-        "name": "kids",
-        "friendly_name": "Kids"
+        "name": "kids_books",
+        "friendly_name": "Kids books"
       }
     },
     {
@@ -53,6 +53,14 @@
       "fields": {
         "name": "new_arrivals",
         "friendly_name": "New Arrivals"
+      }
+    },
+    {
+      "pk": 8,
+      "model": "products.category",
+      "fields": {
+        "name": "kids_games",
+        "friendly_name": "Kids games"
       }
     }
     

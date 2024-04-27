@@ -364,14 +364,14 @@
       "model": "products.product",
       "fields": {
         "sku": "pp5003540313",
-        "name": "Greek Philosophy: Thales to Aristotle (Readings in the History of Philosophy)",
-        "author": "by Reginald E. Allen",
-        "description": "Greek Philosophy: Thales to Aristotle (Readings in the History of Philosophy) by Reginald E. Allen is a comprehensive exploration of the foundations of Western philosophical thought. Focusing on the period from Thales, often considered the first Greek philosopher, to Aristotle, one of the most influential thinkers in history, Allen guides readers through the evolution of Greek philosophy. Drawing from primary sources and scholarly analysis, the book delves into the ideas and contributions of key figures such as Socrates, Plato, and Aristotle, as well as lesser-known philosophers who shaped the intellectual landscape of ancient Greece. With its in-depth examination of primary texts and insightful commentary, Greek Philosophy offers readers a deeper understanding of the philosophical roots of Western civilization",
-        "price": 33.99,
+        "name": "Three Reformers: Luther, Descartes, Rousseau ",
+        "author": "by Jacques Maritain ",
+        "description": "Three Reformers is a quest to identify and articulate the germinative ideas of modernity as found in the minds of Martin Luther, René Descartes, and Jean-Jacques Rousseau. This trio of reformers, per Maritain, were the heirs to the Scholastic legacy in all its order and clarity. ",
+        "price": 13.99,
         "category": 3,
         "rating": 4.6,
         "image_url": " ",
-        "image": "thales.jpg"
+        "image": "jacques.jpg"
       }
     },
     {
@@ -379,14 +379,14 @@
       "model": "products.product",
       "fields": {
         "sku": "pp5003560513",
-        "name": "A Short History of Greek Philosophy",
-        "author": "by John Marshall",
-        "description": "A Short History of Greek Philosophy by John Marshall is a concise yet comprehensive overview of the evolution of Greek philosophical thought. Marshall guides readers through the major developments in Greek philosophy, from its beginnings with the pre-Socratic thinkers such as Thales and Heraclitus, to the towering figures of Socrates, Plato, and Aristotle. The book explores the key ideas and debates that shaped Greek philosophy, including metaphysics, ethics, epistemology, and political theory. With clarity and insight, Marshall illuminates the intellectual landscape of ancient Greece, highlighting the enduring relevance of Greek philosophy to contemporary thought. A Short History of Greek Philosophy serves as an accessible introduction for students and general readers alike, offering a rich exploration of one of the foundational traditions of Western thought.",
-        "price": 38.99,
+        "name": "The Philosophers' Library: Books that Shaped the World (Liber Historica)",
+        "author": "by  Adam Ferner, Chris Meyns",
+        "description": "By cataloguing the history of philosophy via its key works, this book reflects the physical results of human thinking and endeavour; brilliant thought manifested in titles that literally changed the course of knowledge, sometimes by increments, and sometimes with revolutionary impact.",
+        "price": 28.99,
         "category": 3,
         "rating": 4.6,
         "image_url": " ",
-        "image": "short-history.jpg"
+        "image": "the-philosophers.jpg"
       }
     },
     {
@@ -394,14 +394,14 @@
       "model": "products.product",
       "fields": {
         "sku": "pp5003560948",
-        "name": "Early Greek Philosophy",
-        "author": "by Jonathan Barnes",
-        "description": "Early Greek Philosophy by Jonathan Barnes, part of the Penguin Classics series, provides an authoritative and accessible introduction to the origins of Western philosophical thought. Barnes explores the ideas and teachings of the pre-Socratic philosophers, from Thales and Anaximander to Heraclitus and Parmenides, examining their inquiries into the nature of the cosmos, the origins of the universe, and the fundamental principles underlying existence. Drawing on original texts and scholarly analysis, Barnes illuminates the diverse and often contrasting perspectives of these early thinkers, laying the groundwork for the development of Western philosophy. With its clear and engaging presentation, Early Greek Philosophy serves as an indispensable resource for anyone interested in understanding the origins of Western thought.",
+        "name": "The Great Philosophers: An Introduction to Western Philosophy ",
+        "author": "by Bryan Magee",
+        "description": "Beginning with the death of Socrates in 399 B.C., and following the strand of philosophical inquiry through the centuries to recent figures such as Bertrand Russell and Wittgenstein, Bryan Magee's conversations with fifteen contemporary writers and philosophers provide an accessible and exciting account of Western philosophy and its greatest thinkers. With contributions from A. J. Ayer, Bernard Williams, Martha Nussbaum, Peter Singer, and John Searle, the book is not only an introduction to the philosophers of the past, but gives an invaluable insight into the view and personalities of some of the most influential philosophers of the twentieth century.",
         "price": 15.99,
         "category": 3,
         "rating": 4.7,
         "image_url": " ",
-        "image": "early-greek.jpg"
+        "image": "bryan.jpg"
       }
     },
     {
@@ -409,14 +409,14 @@
       "model": "products.product",
       "fields": {
         "sku": "pp5003570628",
-        "name": "The Cynic Philosophers: from Diogenes to Julian (Penguin Classics)",
-        "author": "by Diogenes of Sinope",
-        "description": "The Cynic Philosophers: from Diogenes to Julian (Penguin Classics) compiled by Diogenes of Sinope offers a fascinating glimpse into the lives and teachings of the Cynic philosophers, from the iconic Diogenes himself to later figures like Julian. This collection brings together writings and anecdotes that illustrate the Cynics rejection of conventional values, pursuit of virtue, and commitment to living in accordance with nature. Through their radical simplicity, biting wit, and unconventional lifestyles, the Cynics challenged societal norms and offered provocative insights into ethics, self-sufficiency, and the pursuit of happiness. With its selection of primary texts and insightful commentary, this volume provides readers with a deeper understanding of the Cynic movement and its enduring influence on Western thought. ",
+        "name": "Philosophers Who Changed History: DK History Changers",
+        "author": "by DK, Simon Blackburn ",
+        "description": "This illustrated guide is ideal for those interested in philosophy, politics, history, and literature or who would like to broaden their general understanding of philosophy and the lives of philosophers.",
         "price": 19.99,
         "category": 3,
         "rating": 3,
         "image_url": " ",
-        "image": "diogenes.jpg"
+        "image": "dk.jpg"
       }
     },
     {
@@ -424,14 +424,14 @@
       "model": "products.product",
       "fields": {
         "sku": "pp5003620308",
-        "name": "The Philosophy of Aristotle (Signet Classics)",
-        "author": "by Aristotle",
-        "description": "The Philosophy of Aristotle (Signet Classics) is a comprehensive exploration of the philosophical ideas and teachings of one of the most influential thinkers in Western history. Compiled from Aristotle's own writings, this collection delves into his thoughts on a wide range of topics including metaphysics, ethics, politics, logic, and natural philosophy. Aristotle's systematic approach to inquiry, rigorous analysis, and keen observations have had a profound impact on Western thought for over two millennia. Through this volume, readers gain insight into Aristotle's views on virtue, the nature of reality, the structure of the universe, and the principles of logic. With its clear presentation and scholarly commentary, The Philosophy of Aristotle serves as an essential resource for anyone seeking to understand the foundational principles of Western philosophy.",
-        "price": 32.99,
+        "name": "Big Ideas for Little Philosophers: Imagination with Descartes",
+        "author": "by  Duane Armitage, Maureen McQuerry, Robin Rosenthal (Illustrator)",
+        "description": "Even little children can become philosophers by asking big questions about the world around them. Descartes believed that the ability to imagine is what makes us our true selves. In Imagination with Descartes, this idea is explained for the youngest thinkers, from the uniqueness of imagination to understanding other people's point of view. This book will inspire little ones to have exciting thoughts and conversations about these big ideas.",
+        "price": 12.99,
         "category": 3,
         "rating": 5,
         "image_url": " ",
-        "image": "aristotle.jpg"
+        "image": "big-ideas.jpg"
       }
     },
     {
@@ -439,14 +439,14 @@
       "model": "products.product",
       "fields": {
         "sku": "pp5003690115",
-        "name": "Ancient Greek Philosophers",
-        "author": "by the Editors of Canterbury Classics",
-        "description": "Ancient Greek Philosophers by the Editors of Canterbury Classics is a beautifully crafted collection that celebrates the wisdom and insights of ancient Greek thinkers. This leather-bound classic gathers the foundational works of philosophers such as Socrates, Plato, and Aristotle, among others, showcasing their profound reflections on ethics, metaphysics, epistemology, and politics. From Socrates' probing dialogues to Plato's allegories and Aristotle's systematic treatises, this anthology offers readers a comprehensive overview of ancient Greek philosophy. With its elegant design and timeless content, Ancient Greek Philosophers is a must-have addition to any library, inviting readers to engage with the enduring legacy of these remarkable thinkers.",
-        "price": 20.99,
+        "name": "Meditations: Marcus Aurelius (Penguin Classics)",
+        "author": "by Marcus Aurelius (Author), Diskin Clay (Introduction), Martin Hammond (Translator)",
+        "description": "Written in Greek by the only Roman emperor who was also a philosopher, without any intention of publication, the Meditations of Marcus Aurelius offer a remarkable series of challenging spiritual reflections and exercises developed as the emperor struggled to understand himself and make sense of the universe. While the Meditations were composed to provide personal consolation and encouragement, Marcus Aurelius also created one of the greatest of all works of philosophy: a timeless collection that has been consulted and admired by statesmen, thinkers and readers throughout the centuries.",
+        "price": 9.99,
         "category": 4,
         "rating": 4.7,
         "image_url": " ",
-        "image": "ancient-greek.jpg"
+        "image": "marcus.jpg"
       }
     },
     {
@@ -454,14 +454,14 @@
       "model": "products.product",
       "fields": {
         "sku": "pp5003690116",
-        "name": "Theology, Philosophy, and Religion for 13+ Revision Guide",
-        "author": " by Michael Wilcockson",
-        "description": "Theology, Philosophy, and Religion for 13+ Revision Guide by Michael Wilcockson is a comprehensive study aid designed to help students prepare for exams in theology, philosophy, and religion at the 13+ level. This revision guide covers a wide range of topics, including key concepts, thinkers, and debates within these disciplines. With clear explanations, summaries, and practice questions, Wilcockson provides students with the tools they need to review and reinforce their understanding of religious and philosophical ideas. Whether students are studying for exams or simply seeking to deepen their knowledge in these areas, this guide serves as a valuable resource for revising and consolidating key concepts.",
-        "price": 29,
+        "name": "Black Mirror and Philosophy: Dark Reflections",
+        "author": " by Irwin ",
+        "description": "Black Mirror―the Emmy-winning Netflix series that holds up a dark, digital mirror of speculative technologies to modern society―shows us a high-tech world where it is all too easy to fall victim to ever-evolving forms of social control.In Black Mirror and Philosophy, original essays written by a diverse group of scholars invite you to peer into the void and explore the philosophical, ethical, and existential dimensions of Charlie Brooker’s sinister stories. ",
+        "price": 16,
         "category": 4,
         "rating": 4.4,
         "image_url": " ",
-        "image": "teologia.jpg"
+        "image": "mirror.jpg"
       }
     },
     {
@@ -469,14 +469,14 @@
       "model": "products.product",
       "fields": {
         "sku": "pp5003780391",
-        "name": "The Religions Book: Big Ideas Simply Explained",
-        "author": "by DK",
-        "description": "The Religions Book: Big Ideas Simply Explained by DK is a visually stunning guide that offers an accessible introduction to the world's major religions. Through vibrant illustrations, concise explanations, and informative timelines, DK provides readers with a comprehensive overview of religious beliefs, rituals, and practices from around the globe. From ancient traditions to modern faiths, this book explores the key tenets of Christianity, Islam, Judaism, Hinduism, Buddhism, and other religions, as well as lesser-known spiritual movements. With its clear and engaging presentation, The Religions Book invites readers to explore the diversity of religious expression and deepen their understanding of the beliefs that have shaped human history and culture.",
+        "name": "The Classic Friedrich Nietzsche Collection: 5-Book paperback boxed set",
+        "author": "by Frederich Nietzsche",
+        "description": "One of the most prominent thinkers of the 19th century, Nietzsche was a cultural critic and philosopher whose theories on truth, morality, nihilism and the meaning of existence have had enormous influence on Western philosophy. This box set contains his most prominent works",
         "price": 26.99,
         "category": 4,
         "rating": 4.5,
         "image_url": " ",
-        "image": "religions-book.jpg"
+        "image": "the-classic.jpg"
       }
     },
     {
@@ -484,14 +484,14 @@
       "model": "products.product",
       "fields": {
         "sku": "pp5003790542",
-        "name": "Philosophy of Religion: A Very Short Introduction",
-        "author": "by Tim Bayne",
-        "description": "Philosophy of Religion: A Very Short Introduction by Tim Bayne provides a concise yet comprehensive overview of the key issues and debates within the field of philosophy of religion. In this accessible guide, Bayne explores fundamental questions such as the existence of God, the nature of religious experience, the problem of evil, and the relationship between faith and reason. Drawing from both classical and contemporary sources, Bayne offers readers a balanced and nuanced perspective on the various philosophical approaches to religion. Whether you're a newcomer to the subject or seeking to deepen your understanding, this book serves as an invaluable primer for exploring the complex intersections of faith, reason, and philosophical inquiry.",
-        "price": 39.99,
+        "name": "A Little History of Philosophy",
+        "author": "by Nigel Warburton ",
+        "description": "In forty brief chapters, Nigel Warburton provides interesting and often quirky stories of the lives and deaths of thought-provoking philosophers - from the ancients, who debated freedom and the spirit, to Peter Singer, who asks the disquieting philosophical and ethical questions that haunt our own times.",
+        "price": 9.99,
         "category": 4,
         "rating": 4.7,
         "image_url": "",
-        "image": "religion-phil.jpg"
+        "image": "nigel.jpg"
       }
     },
     {
@@ -499,14 +499,14 @@
       "model": "products.product",
       "fields": {
         "sku": "pp5003831225",
-        "name": "An Introduction to Philosophy of Religion: CCEA GCSE Religious Studies",
-        "author": "by Paula McCullough",
-        "description": "An Introduction to Philosophy of Religion: CCEA GCSE Religious Studies by Paula McCullough is a comprehensive textbook designed to introduce students to the fundamental concepts and debates within the philosophy of religion, tailored specifically for the CCEA GCSE Religious Studies curriculum. McCullough covers key topics such as arguments for and against the existence of God, the problem of evil, religious experience, and the nature of religious language. Through clear explanations, case studies, and discussion questions, the book engages students in critical thinking and encourages them to explore diverse perspectives on religious belief and practice. With its accessible approach and alignment with curriculum requirements, An Introduction to Philosophy of Religion serves as an invaluable resource for students studying religious studies at the GCSE level.",
-        "price": 23.99,
+        "name": "Philosophers on Consciousness: Talking about the Mind (Talking about Philosophy)",
+        "author": "by Jack Symes",
+        "description": "This book is a short, accessible and engaging guide to the mystery of consciousness. Featuring remastered interviews and original essays from the world's leading thinkers, Philosophers on Consciousness sheds new light on the most promising theories in philosophy and science. Beyond understanding the mind, this is a journey into personal identity, the origin of meaning, the nature of morality and the fundamental structure of reality.",
+        "price": 13.99,
         "category": 4,
         "rating": 4.4,
         "image_url": "",
-        "image": "introduction.jpg"
+        "image": "philosophers.jpg"
       }
     },
     {
@@ -514,14 +514,14 @@
       "model": "products.product",
       "fields": {
         "sku": "pp5003861402",
-        "name": "Three Books of Occult Philosophy: The Natural World / The Celestial World / The Divine World",
-        "author": "by Heinrich Cornelius Agrippa",
-        "description": "Three Books of Occult Philosophy: The Natural World / The Celestial World / The Divine World by Heinrich Cornelius Agrippa is a foundational text in Western esotericism. Originally published in the 16th century, this seminal work delves into various aspects of occultism, mysticism, and magic. Agrippa explores topics such as natural magic, astrology, alchemy, theurgy, and the relationship between the physical and spiritual realms. Drawing from classical and medieval sources, as well as his own insights, Agrippa presents a comprehensive system of occult philosophy that seeks to unlock the mysteries of the universe. With its blend of theory, practice, and spiritual wisdom, Three Books of Occult Philosophy continues to be studied and revered by occultists, magicians, and scholars interested in the esoteric traditions of the Western world",
-        "price": 109.99,
+        "name": "Philosophy as a Way of Life: Spiritual Exercises from Socrates to Foucault",
+        "author": "by Pierre Hadot",
+        "description": "This book presents a history of spiritual exercises from Socrates to early Christianity, an account of their decline in modern philosophy, and a discussion of the different conceptions of philosophy that have accompanied the trajectory and fate of the theory and practice of spiritual exercises. Hadot's book demonstrates the extent to which philosophy has been, and still is, above all else a way of seeing and of being in the world.",
+        "price": 25.99,
         "category": 7,
-        "rating": 3,
+        "rating": 4,
         "image_url": " ",
-        "image": "cornelius.jpg"
+        "image": "pierre.jpg"
       }
     },
     {
@@ -529,14 +529,14 @@
       "model": "products.product",
       "fields": {
         "sku": "pp5003910638",
-        "name": "Bertrand Russell on God and Religion (Great Books in Philosophy)",
-        "author": "by Bertrand Russell",
-        "description": "Bertrand Russell on God and Religion (Great Books in Philosophy) presents a selection of Bertrand Russell's most influential writings on the subjects of God and religion. As one of the most prominent philosophers of the 20th century, Russell's views on religion were both controversial and thought-provoking. In this collection, readers encounter Russell's sharp critiques of religious belief, his arguments against the existence of God, and his exploration of the ethical and social implications of religious faith. Through clear and incisive prose, Russell challenges readers to critically examine their own beliefs and assumptions about religion, offering insights that continue to spark debate and reflection. Bertrand Russell on God and Religion is an essential read for anyone interested in the intersection of philosophy, theology, and the human condition.",
-        "price": 39.99,
+        "name": "The Gang of Three: Socrates, Plato, Aristotle (Ancient Wisdom)",
+        "author": "by Neel Burton",
+        "description": "This book sets out to do three things: trace the journey from mythos to logos; outline the lives and thought of Socrates, Plato, and Aristotle; and consider their legacy, and what can still be gained from them, especially in the universal fields of mental health and human flourishing.",
+        "price": 19.99,
         "category": 7,
         "rating": 4.6,
         "image_url": " ",
-        "image": "bertrand.jpg"
+        "image": "the_gang.jpg"
       }
     },
     {
@@ -544,14 +544,14 @@
       "model": "products.product",
       "fields": {
         "sku": "pp5003950574",
-        "name": "What is Humanism? How do you live without a god? And Other Big Questions for Kids",
-        "author": "by Michael Rosen",
-        "description": "What is Humanism? How do you live without a god? And Other Big Questions for Kids by Michael Rosen is a thought-provoking exploration of humanism tailored for young readers. Through engaging storytelling and accessible language, Rosen addresses fundamental questions about humanism, ethics, and the meaning of life. He encourages children to think critically about their beliefs and values, offering insights into how humanists approach life's big questions without relying on religious doctrine. With its emphasis on empathy, reason, and the pursuit of human flourishing, What is Humanism? inspires children to explore their own worldview and engage with diverse perspectives in a spirit of open-minded inquiry.",
-        "price": 20,
+        "name": "Ethics: The Fundamentals (Fundamentals of Philosophy)",
+        "author": "by Julia Driver",
+        "description": "Ethics: The Fundamentals explores core ideas and arguments in moral theory by introducing students to different philosophical approaches to ethics, including virtue ethics, Kantian ethics, divine command theory, and feminist ethics.",
+        "price": 17.99,
         "category": 7,
         "rating": 3.2,
         "image_url": "",
-        "image": "what-is-humanism.jpg"
+        "image": "julia.jpg"
       }
     },
     {
@@ -559,14 +559,14 @@
       "model": "products.product",
       "fields": {
         "sku": "pp5003950576",
-        "name": "Shadows to Sunlight: A Creative Retelling of Plato's Allegory of the Cave (Philosophy for Kids)",
-        "author": "by B.J. Condrey",
-        "description": "Shadows to Sunlight: A Creative Retelling of Plato's Allegory of the Cave (Philosophy for Kids) by B.J. Condrey offers a captivating journey into one of Plato's most famous allegories, tailored for young readers. Through imaginative storytelling and vibrant illustrations, Condrey brings Plato's allegory to life, inviting children to explore its profound philosophical themes. As readers follow the journey of the characters from darkness and ignorance to enlightenment and understanding, they are encouraged to contemplate concepts such as reality, perception, and the pursuit of knowledge. With its engaging narrative and accessible language, Shadows to Sunlight sparks curiosity and critical thinking in children, making Plato's timeless wisdom accessible and relatable for a new generation.",
-        "price": 36.99,
+        "name": "Dungeons and Dragons and Philosophy: Read and Gain Advantage on All Wisdom Checks",
+        "author": "by Robichaud",
+        "description": "Dungeons & Dragons and Philosophy probes the rich terrain of philosophically compelling concepts and ideas that underlie Dungeons & Dragons, the legendary fantasy role-playing game that grew into a world-wide cultural phenomenon. A series of accessible essays reveals what the imaginary worlds of D&D can teach us about ethics, morality, metaphysics and more.",
+        "price": 16.99,
         "category": 7,
         "rating": 4.7,
         "image_url": " ",
-        "image": "shadows-kids.jpg"
+        "image": "dungeons.jpg"
       }
     },
     {
@@ -574,14 +574,89 @@
       "model": "products.product",
       "fields": {
         "sku": "pp5003960062",
-        "name": "Philosophy for Kids (and for Everyone): Plato",
-        "author": "by Luis Arturo Pelayo",
-        "description": "Philosophy for Kids (and for Everyone): Plato by Luis Arturo Pelayo is a captivating exploration of the life and ideas of the ancient Greek philosopher Plato, tailored for readers of all ages. Pelayo presents Plato's philosophy in an engaging and accessible manner, making his timeless insights into topics such as ethics, politics, and metaphysics accessible to children and adults alike. Through clear explanations and thought-provoking discussions, readers are invited to ponder Plato's famous allegories, dialogues, and theories, gaining a deeper understanding of his profound influence on Western thought. With its playful yet informative approach, Philosophy for Kids (and for Everyone): Plato encourages readers to think critically and engage with philosophy in a way that is both enlightening and enjoyable.",
-        "price": 28.99,
+        "name": "How the World Thinks: A Global History of Philosophy",
+        "author": "by Julian Baggini",
+        "description": "One of the great unexplained wonders of human history is that written philosophy flowered entirely separately in China, India and Ancient Greece at more or less the same time. These early philosophies have had a profound impact on the development of distinctive cultures in different parts of the world. What we call 'philosophy' in the West is not even half the story.",
+        "price": 8.99,
         "category": 7,
+        "rating": 4.4,
+        "image_url": " ",
+        "image": "world_thinks.jpg"
+      }
+    },
+    {
+      "pk": 40,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5003964441",
+        "name": "BrainBolt Brain Teaser",
+        "author": "by BrainBolt",
+        "description": "Puzzle Ages 7 to 107, Highly Competitive, Mind-Melting Light-Up Memory Game, Educational Insights, Solo or Two Player, for Travel, Black, Green, 20.3",
+        "price": 19.99,
+        "category": 8,
+        "rating": 4.3,
+        "image_url": " ",
+        "image": "learning.jpg"
+      }
+    },
+    {
+      "pk": 41,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5003964442",
+        "name": "STEM puzzle game",
+        "author": "by The Genius Star",
+        "description": "Find the Solution - The puzzle game ensures at least one possible solution to every game, with some having multiple",
+        "price": 20.99,
+        "category": 8,
         "rating": 4.8,
         "image_url": " ",
-        "image": "kids-plato.jpg"
+        "image": "puzzle.jpg"
+      }
+    },
+    {
+      "pk": 42,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5003964443",
+        "name": "Coogam Wooden Geoboard Mathematical Manipulative Material Array Block Geo Board",
+        "author": "by Coogam",
+        "description": "Educational Toy: Having them in school to learn all types of different 2D shapes and figuring out fractions. Good for kids who love making shapes, letters, designs and struggle with grasp, fine motor & visual motor skills.",
+        "price": 24.99,
+        "category": 8,
+        "rating": 4.7,
+        "image_url": " ",
+        "image": "educational-toy.jpg"
+      }
+    },    
+    {
+      "pk": 43,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5003964444",
+        "name": "Dobble | Card Game",
+        "author": "by Asmodee",
+        "description": "A card game of speed, observation and reflexes. Race to find the one matching image between one card and another. Images may be different sizes and placed on any part of the card, making them difficult to spot",
+        "price": 10.99,
+        "category": 8,
+        "rating": 4.8,
+        "image_url": " ",
+        "image": "card-game.jpg"
+      }
+    },
+    {
+      "pk": 44,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5003964445",
+        "name": "BrainBox Harry Potter",
+        "author": "by BrainBox",
+        "description": "Fun & Educational Card Game. 10 Minutes Play Time",
+        "price": 11.99,
+        "category": 8,
+        "rating": 4.5,
+        "image_url": " ",
+        "image": "brain-harry.jpg"
       }
     }
   ]

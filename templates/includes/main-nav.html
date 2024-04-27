@@ -23,7 +23,7 @@
                 Books
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="books-link">
-                <a href="{% url 'products' %}?category=greeks,essentials" class="dropdown-item">Greeks &amp; Essentials</a>
+                <a href="{% url 'products' %}?category=greeks" class="dropdown-item">Greeks</a>
                 <a href="{% url 'products' %}?category=religion" class="dropdown-item">Religion</a>
                 <a href="{% url 'products' %}?category=eastern" class="dropdown-item">Eastern</a>
                 <a href="{% url 'products' %}?category=greeks,essentials,religion,eastern" class="dropdown-item">All Books</a>
@@ -35,9 +35,9 @@
                 Kids
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="kids-link">
-                <a href="{% url 'products' %}?category=kids" class="dropdown-item">Kids Books</a>
-                <a href="{% url 'products' %}?category=games" class="dropdown-item">Games</a>
-                <a href="{% url 'products' %}?category=kids,games" class="dropdown-item">All Kids</a>
+                <a href="{% url 'products' %}?category=kids_books" class="dropdown-item">Kids Books</a>
+                <a href="{% url 'products' %}?category=kids_games" class="dropdown-item">Games</a>
+                <a href="{% url 'products' %}?category=kids_books,kids_games" class="dropdown-item">All Kids</a>
             </div>
         </li>
 

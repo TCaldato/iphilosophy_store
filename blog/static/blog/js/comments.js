@@ -1,3 +1,4 @@
+/* jshint esversion: 8, jquery: true */
 const editButtons = document.getElementsByClassName("btn-edit");
 const commentText = document.getElementById("id_body");
 const commentForm = document.getElementById("commentForm");

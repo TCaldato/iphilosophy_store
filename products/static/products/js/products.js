@@ -1,4 +1,4 @@
-
+/* jshint esversion: 8, jquery: true */
 const editReviewButtons = document.getElementsByClassName("btn-edit-review");
 const reviewText = document.getElementById("review_text");
 const reviewRating = document.querySelector("select[name='rating']");

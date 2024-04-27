@@ -82,7 +82,7 @@
 									{% endif %}
 									<!-- Wishlist Button -->
 									<div>
-										<button onclick="location.href='{% url 'add_to_wishlist' product.id %}'" class="btn btn-sm btn-outline-secondary small">Add to Wishlist</button>
+										<button onclick="location.href='{% url 'add_to_wishlist' product.id %}?next={{ request.path }}'" class="btn btn-sm btn-outline-secondary small">Add to Wishlist</button>
 									</div>
 									{% if request.user.is_superuser %}
 									<small class="ml-3">

@@ -10,6 +10,8 @@
 6. [Set up project to use a relational database](#set-up-project-to-use-a-relational-database)
 7. [Connect Heroku to the PostgreSQL database](#connect-heroku-to-the-postgresql-database)
 
+Back to Readme file [README.md](README.md)
+
 ## Introduction
 
 To ensure a smooth submission process, I made an initial effort to deploy this project on Heroku as early as possible.

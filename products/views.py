@@ -149,19 +149,24 @@ def delete_product(request, product_id):
 
 @login_required
 def add_review(request, product_id):
+    """
+    Allow an authenticated user to add a review to a specific product.
+    """
     product = get_object_or_404(Product, pk=product_id)
-    if request.method == 'POST':
+    if request.method == "POST":
         form = ReviewForm(request.POST)
         if form.is_valid():
             review = form.save(commit=False)
             review.product = product
             review.user = request.user
             review.save()
-            messages.success(request, 'Your review has been added!')
-            return redirect('product_detail', product_id=product_id)
+            messages.success(request, "Your review has been added!")
+            return redirect("product_detail", product_id=product_id)
     else:
         form = ReviewForm()
-    return render(request, 'products/add_review.html', {'form': form, 'product': product})
+    return render(
+        request, "products/add_review.html", {"form": form, "product": product}
+    )
 
 
 @login_required
@@ -169,58 +174,82 @@ def edit_review(request, product_id, review_id):
     """
     View to edit reviews. Ensure that only the author of the review can edit it.
     """
-    review = get_object_or_404(Review, pk=review_id, user=request.user, product_id=product_id)  # Ensure only the author can edit.
+    review = get_object_or_404(
+        Review, pk=review_id, user=request.user, product_id=product_id
+    )  # Ensure only the author can edit.
 
     if request.method == "POST":
         review_form = ReviewForm(request.POST, instance=review)
         if review_form.is_valid():
             review_form.save()
-            messages.success(request, 'Review updated successfully!')
-            return redirect('product_detail', product_id=product_id)  # Redirect to product detail page.
+            messages.success(request, "Review updated successfully!")
+            return redirect(
+                "product_detail", product_id=product_id
+            )  # Redirect to product detail page.
         else:
-            messages.error(request, 'Error updating review. Please check the form.')
+            messages.error(request, "Error updating review. Please check the form.")
 
     else:
         review_form = ReviewForm(instance=review)
 
-    return render(request, 'products/edit_review.html', {'form': review_form, 'product_id': product_id})
+    return render(
+        request,
+        "products/edit_review.html",
+        {"form": review_form, "product_id": product_id},
+    )
 
 
 @login_required
 def delete_review(request, product_id, review_id):
-    review = get_object_or_404(Review, id=review_id, user=request.user)  
-    if request.method == 'POST':
+    """
+    Allow an authenticated user to delete their own review of a product.
+    """
+    review = get_object_or_404(Review, id=review_id, user=request.user)
+    if request.method == "POST":
         review.delete()
-        messages.success(request, 'Review deleted successfully!')
-        return redirect('product_detail', product_id=product_id)
+        messages.success(request, "Review deleted successfully!")
+        return redirect("product_detail", product_id=product_id)
     else:
-        messages.error(request, 'Invalid method')
-        return redirect('product_detail', product_id=product_id)
-    
+        messages.error(request, "Invalid method")
+        return redirect("product_detail", product_id=product_id)
+
 
 @login_required
 def view_wishlist(request):
+    """
+    Display the user's wishlist.
+    """
     wishlist, created = Wishlist.objects.get_or_create(user=request.user)
-    return render(request, 'products/wishlist.html', {'wishlist': wishlist})
+    return render(request, "products/wishlist.html", {"wishlist": wishlist})
+
 
 @login_required
 def add_to_wishlist(request, product_id):
+    """
+    Add a product to the user's wishlist.
+    """
     product = get_object_or_404(Product, id=product_id)
     wishlist, created = Wishlist.objects.get_or_create(user=request.user)
     if product not in wishlist.products.all():
         wishlist.products.add(product)
-        messages.success(request, f'{product.name} was added to your wishlist!')
+        messages.success(request, f"{product.name} was added to your wishlist!")
     else:
-        messages.info(request, 'This product is already in your wishlist.')
+        messages.info(request, "This product is already in your wishlist.")
 
     # Usar o referer para voltar à página anterior
-    return HttpResponseRedirect(request.META.get('HTTP_REFERER', 'redirect_if_referer_not_found'))
+    return HttpResponseRedirect(
+        request.META.get("HTTP_REFERER", "redirect_if_referer_not_found")
+    )
+
 
 @login_required
 def remove_from_wishlist(request, product_id):
+    """
+    Remove a product to the user's wishlist.
+    """
     product = get_object_or_404(Product, id=product_id)
     wishlist = Wishlist.objects.get(user=request.user)
     if product in wishlist.products.all():
         wishlist.products.remove(product)
-        messages.success(request, f'{product.name} was removed from your wishlist.')
-    return redirect('wishlist')
+        messages.success(request, f"{product.name} was removed from your wishlist.")
+    return redirect("wishlist")

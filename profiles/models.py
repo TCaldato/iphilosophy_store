@@ -25,7 +25,7 @@ class UserProfile(models.Model):
 
     def __str__(self):
         """Return the username associated with the profile."""
-        return self.user.username
+        return str(self.user.username)
 
 
 @receiver(post_save, sender=User)

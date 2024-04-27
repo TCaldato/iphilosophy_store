@@ -180,7 +180,7 @@ input[name='q']::placeholder {
 }
 
 .post-title {
-    margin-top: 40%;
+    margin-top: 40% !important;
     margin-left: 5%;
 }
 

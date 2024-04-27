@@ -227,6 +227,8 @@ def view_wishlist(request):
 def add_to_wishlist(request, product_id):
     """
     Add a product to the user's wishlist.
+    Handles the case where users must be logged in to add items, redirecting
+    to the login page if not authenticated and then back to the wishlist on successful login.
     """
     product = get_object_or_404(Product, id=product_id)
     wishlist, created = Wishlist.objects.get_or_create(user=request.user)
@@ -236,10 +238,8 @@ def add_to_wishlist(request, product_id):
     else:
         messages.info(request, "This product is already in your wishlist.")
 
-    # Usar o referer para voltar à página anterior
-    return HttpResponseRedirect(
-        request.META.get("HTTP_REFERER", "redirect_if_referer_not_found")
-    )
+    # Redirect to the wishlist page or the product page after adding to wishlist
+    return redirect('wishlist')  # Adjusted to redirect to 'wishlist' named URL or another safe URL
 
 
 @login_required

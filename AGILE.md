@@ -146,7 +146,7 @@ During the development process, I encountered many times, an issue with the SMTP
 
 During the seventh iteration, the primary focus will be on enhancing the writing aspect of the project. I will be dedicating my efforts towards documenting the ReadMe, Agile, Testing, and Deploying activities in detail. This will enable me to create comprehensive documentation that will help keep a record of the project's progress and ensure that all the aspects of the project are well-documented.
 
-### The seventh phase included the User Stories:
+### The seventh phase included the Tasks:
 
 - Task: ReadMe **[#42](https://github.com/TCaldato/iphilosophy_store/issues/42)**
 - Task: Agile **[#43](https://github.com/TCaldato/iphilosophy_store/issues/43)**

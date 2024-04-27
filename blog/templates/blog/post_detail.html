@@ -2,7 +2,9 @@
 {% load static %}
 {% load crispy_forms_tags %}
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+<!-- Css was not being read, added ?v=1 - source: 
+https://stackoverflow.com/questions/3466989/what-does-appending-v-1-to-css-and-javascript-urls-in-link-and-script-tags-do-->
+<link rel="stylesheet" href="{% static 'blog/css/blog.css' %}?v=1">
 {% endblock %}
 {% block content %}
 <div class="overlay"></div>

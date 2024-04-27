@@ -10,7 +10,7 @@
 6. [Set up project to use a relational database](#set-up-project-to-use-a-relational-database)
 7. [Connect Heroku to the PostgreSQL database](#connect-heroku-to-the-postgresql-database)
 
-Back to Readme file [README.md](README.md)
+Back to Readme file [ReadMe](README.md)
 
 ## Introduction
 
@@ -181,4 +181,4 @@ Now your deployed app is connected to your PostgreSQL cloud database.
 
 [Back to top](#deployment)
 
-Back to Readme file [README.md](README.md)
+Back to Readme file [ReadMe](README.md)

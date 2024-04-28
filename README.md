@@ -176,6 +176,7 @@ This process has been documented separately in [Deploy](DEPLOY.md)
 ## Credits
 
 - [Pixabay](https://pixabay.com/) - Link to Pixabay for Free Images.
+- [Amazon.Uk](https://www.amazon.co.uk/) - Link to Amazon UK - All products images were taken from Amazon site.
 - [Free Formatter](https://www.freeformatter.com/) - Link for Free Formatter for formatting all codes.
 
 Various sources were consulted to gain a better understanding of the code being implemented. The following sites were most frequently utilized:
@@ -184,7 +185,7 @@ Various sources were consulted to gain a better understanding of the code being 
 - [W3Schools](https://www.w3schools.com/) - Link to W3Schools page, used especially for CSS search.
 - [Python Package Index](https://pypi.org/) - Link to Python Package Index page, used for support for Python code.
 - [Pytlint Dev Documentation](https://pylint.readthedocs.io/en/latest/index.html) - Link to Pylint page, used for support for Python code.
-.
+- [JSHint Documentation](https://jshint.com/) - Link to JSHint documentation.
 .
 .
 .

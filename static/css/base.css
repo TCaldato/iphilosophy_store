@@ -21,7 +21,7 @@ body {
 }
 
 .logo-font {
-    text-transform: none;
+    text-transform: uppercase;
 }
 
 .main-logo-link {
@@ -188,7 +188,16 @@ input[name='q']::placeholder {
     background:black !important;
     clear:left; 
     font:14px Helvetica,Arial,sans-serif; 
-    max-width: 100%;
+    width: 100%;
+}
+
+footer {
+    background-color: #000;
+    color: white;
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+    box-sizing: border-box;
 }
 
 /* -------------------------------- Media Queries */
@@ -311,6 +320,23 @@ input[name='q']::placeholder {
         height: calc(100vh - 116px);
     }
 
+    .logo-font {
+        font-size: 40px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    header .logo-font {
+        margin: 0 10px;
+        padding: 0;
+    }
+
+    .shop-now-button {
+        min-width: auto;
+        width: 100%;
+        padding: 10px;
+    }
+
     .display-4.logo-font.text-black {
         font-size: 2rem;
     }
@@ -345,5 +371,23 @@ input[name='q']::placeholder {
 
     .increment-qty, .decrement-qty {
         padding: .25rem .5rem !important;
+    }
+    
+    #mc_embed_signup {
+        padding: 0 15px;
+        font-size: 12px; 
+    }
+
+    #mc_embed_signup form {
+        display: block; 
+    }
+
+    #mc_embed_signup input[type="email"],
+    #mc_embed_signup .button {
+        width: 100%; 
+        margin-top: 8px; 
+    }
+    footer {
+        padding: 20px 15px;
     }
 }

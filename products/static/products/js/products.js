@@ -14,9 +14,9 @@ for (let button of editReviewButtons) {
         
         // Extract the current rating from the review container
         const reviewCurrentRating = reviewContainer.querySelector(".review-rating").innerText.match(/\d+/)[0];
-        reviewText.value = reviewContent; // Set the text of the textarea to the review content
-        reviewRating.value = reviewCurrentRating; // Set the value of the rating dropdown to the current rating
-        submitButton.innerText = "Update Review"; // Change the text of the submit button to indicate update action
+        reviewText.value = reviewContent; 
+        reviewRating.value = reviewCurrentRating; 
+        submitButton.innerText = "Update Review";
         
         // Set the action attribute of the form to edit the specific review
         reviewForm.setAttribute("action", `edit_review/${reviewId}/`);

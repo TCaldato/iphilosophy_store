@@ -20,9 +20,9 @@
     14. [Wishlist](#wishlist)
     15. [Shooping Bag Page](#shooping-bag-page)
     16. [Checkout](#checkout)
+    17. [404 Error Page](#404-error-page)
 3. [Validation](#validation)
-4. [Lighthouse](#lighthouse)
-5. [Browsers](#browsers)
+4. [Browsers](#browsers)
 
 Back to Readme file [ReadMe](README.md)
 
@@ -250,6 +250,26 @@ Not logged:
 
 [Back to top](#testing)
 
+#### Product Management Page
+
+- Expected:
+     - When Super User is logged in, they should not have access to the Product Management page. If they click on the Product Management button, they should be add products to the website.
+- Testing:
+     - To test this feature, I clicked the Product Management button logged in.
+
+- Result:
+     - The feature acted as expected and redirected the user to the Product Management page logged in.
+
+![Product Management](media/testing/gifs/product-management.gif)
+
+#### Admin page
+
+- It is possible to have access to the Admin Page only with a Super User registered. In this part the Super User has access to all Reviews, Comments, Collaboration text, to add, remove or edit products, have access to the registered emails, Posts, and the Orders done.
+
+![Admin](media/testing/gifs/admin-page.gif)
+
+[Back to top](#testing)
+
 ### Links and Buttons in the Land Page
 
 - Expected:
@@ -470,6 +490,19 @@ Not logged:
 
 [Back to top](#testing)
 
+### 404 Error Page
+
+- Expected:
+     - When Users type a page that does not exist a page 404 with the message 'THE PAGE YOU ARE LOOKING FOR ISN'T AVAILABLE' will be displayed.
+
+- Testing:
+     - To test this feature, I typed */class* in the end of the link page.
+
+- Result:
+     - After typing */class* the page was displayed.
+
+![404 page](media/testing/page-404.jpg)
+
 ## Validation
 
 Passed in all validators below:
@@ -504,10 +537,6 @@ Tested all Python codes and all of them passed:
 ![PEP8](media/testing/pep8.jpg "Python Validator")
 
 [Back to top](#testing)
-
-## Lighthouse
-
-![Lighthouse](.....)
 
 ## Browsers
 

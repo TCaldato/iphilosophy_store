@@ -4,6 +4,8 @@ Welcome to Iphilosophy, your premier online destination for exploring and purcha
 
 Iphilosophy is more than just an e-commerce site; it’s a community. Our platform features an engaging blog where philosophy enthusiasts can discuss ideas, comment on posts, and registered users can leave product reviews. We employ robust marketing strategies across SEO, social media, and email to extend our reach and connect with more users.
 
+![Responsive](media/readme/am-i-responsive.jpg)
+
 You can check the live website [here](https://iphilosophy-store-81d2532ac343.herokuapp.com/)
 
 ## Table of contents
@@ -27,7 +29,7 @@ You can check the live website [here](https://iphilosophy-store-81d2532ac343.her
 8. [Credits](#credits)
 9. [Acknowledgements](#acknowledgements)
 
-# Introduction
+## Introduction
 
 ## About the Project Iphilosophy Store
 
@@ -143,6 +145,11 @@ Email marketing is a vital tool for Iphilosophy to maintain close relationships 
 
 ![MailChimp](media/readme/mailchimp-home.jpg)
 
+### Link to external resource
+
+At the footer a link to [The School of Life](https://www.theschooloflife.com/articles/) was added to help Users to find even more information about the World of Philosophy.
+
+![School of Life](media/readme/external-source.jpg)
 
 ## Features
 
